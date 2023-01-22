@@ -1,0 +1,37 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Sander Iwase
+	email = shm@vortx.com.br
+# Please adapt and uncomment the following lines:
+#	name = Sander Heidy Marques Iwase
+#	email = shm@vortx.com.br
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[core]
+    editor = code --wait
+[alias]
+    s = !git status 
+    c = !git add --all && git commit -m
+    l = !git log --pretty=format:'%C(blue)%h%C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
+    b = !git branch
+    psh = "!git push origin \"$(git rev-parse --abbrev-ref HEAD)\""
+    pll = "!git pull origin \"$(git rev-parse --abbrev-ref HEAD)\""
+    npc = "!git log origin/\"$(git rev-parse --abbrev-ref HEAD)\"..\"$(git rev-parse --abbrev-ref HEAD)\""
+[safe]
+	directory = C:/Users/SanderHeidyMarquesIw/Desenv/Website.api
+	directory = C:/Users/SanderHeidyMarquesIw/Desenv/IntegraSinqia.Api
+	directory = C:/Users/SanderHeidyMarquesIw/Desenv/IntegraCaixaOnline.Api
+	directory = C:/Users/SanderHeidyMarquesIw/Desenv/VxNotifications.Api
+	directory = C:/Users/SanderHeidyMarquesIw/Desenv/MsCotas.Api
+	directory = C:/Users/SanderHeidyMarquesIw/Desenv/ms-fundos
+	directory = C:/Users/SanderHeidyMarquesIw/Desenv/OneGestor.Api
+	directory = C:/Users/SanderHeidyMarquesIw/Desenv/OneGestor.Web
+	directory = C:/Users/SanderHeidyMarquesIw/Desenv/VxDocumentation
+	directory = C:/Users/SanderHeidyMarquesIw/Desenv/Website.web
+	directory = C:/Users/SanderHeidyMarquesIw/Desenv/IntegraGalgo.Api
+	directory = C:/Users/SanderHeidyMarquesIw/Desenv/IntegraVorasys.Api
+	directory = C:/Users/SanderHeidyMarquesIw/Desenv/VxDeveloper
